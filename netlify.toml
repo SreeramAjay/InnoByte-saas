@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/Innobyte-home.html"
+status = 200
