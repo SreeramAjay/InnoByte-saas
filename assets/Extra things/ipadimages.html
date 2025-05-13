@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Image Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            background-color: #f8f8f8;
+        }
+        .iphone-container {
+            position: relative;
+            width: 600px; /* Adjusted for iPhone frame */
+        }
+        .iphone-frame {
+            width: 100%;
+            display: block;
+        }
+        .screen-content {
+            position: absolute;
+            top: 12%;
+            left: 8%;
+            width: 84%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        .image-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+        .grid-image:nth-child(1) {
+            width: 70%; /* Center image 1 */
+        }
+        .bottom-images {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .bottom-images .grid-image {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="iphone-container">
+    <!-- iPhone Frame -->
+    <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/24bd0ff35c56903ddb45d50b74c2fd6772a7f4b1dec7957f4cb8e464ac53f77b?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="iPhone Frame" class="iphone-frame">
+    
+    <!-- Content inside the iPhone screen -->
+    <div class="screen-content">
+        <div class="image-grid">
+            <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/a3805593d268bb0962fc7b1ba29cd26e72a3fc0a824b531ffe9b8472de5773f1?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Image 1" class="grid-image">
+            <div class="bottom-images">
+                <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/4945f8338f2af7fddc9343bcaeddb73032c0d824123d15bc5a7d3442b2c0b2e6?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Image 2" class="grid-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/0fc91c68aed4806163ac98d3aa4915c3972781590deb1c15e23dcca55446dd8c?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Image 3" class="grid-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

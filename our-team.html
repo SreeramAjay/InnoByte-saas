@@ -1,0 +1,611 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Team</title>
+        <link rel="icon" href="assets/images/IBLogo.png" type="image/png">
+        <link rel="stylesheet" href="assets/css/styles.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+            :root {
+        --primary-red: #FAD02C;
+        --white: #ffffff;
+        --text-dark: #333333;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    /* Team Section Styles */
+    .team-section {
+        background-color: var(--primary-red);
+        color: var(--white);
+        padding: 10px;
+        text-align: center;
+        margin-top: 65px;
+        height: 100vh;
+    }
+
+    .team-section h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .team-section h3 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-bottom: 3rem;
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+        position: relative;
+        max-width: 700px; /* Adjust based on design */
+        margin: 0 auto;
+        padding: 10px;
+        overflow: hidden;
+        margin-top: 40px;
+    }
+
+    .carousel {
+        display: flex;
+        gap: 2rem;
+        transition: transform 0.6s ease-in-out;
+        will-change: transform;
+    }
+
+    .team-member {
+        flex: 0 0 calc(50% - 1rem); /* Show 2 members at a time */
+        background: var(--white);
+        border-radius: 10px;
+        padding: 2rem;
+        color: var(--text-dark);
+        text-align: center;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+        border: 4px solid var(--primary-red);
+        overflow: hidden;
+    }
+
+    .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .team-member h3 {
+        color: var(--primary-red);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .team-member h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .team-member p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    /* Navigation Buttons */
+    /* Fix button alignment */
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 4px solid #FAD02C; /* Add border color */
+        color: var(--primary-red);
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+
+    /* Join Section Styles */
+    .join-section {
+        padding: 4rem 2rem;
+        background: var(--white);
+    }
+
+    .join-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .join-content h2 {
+        color: var(--primary-red);
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .join-layout {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .team-image-large {
+        flex: 0 0 45%;
+    }
+
+    .team-image-large img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .join-message-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .message-box {
+        background: var(--primary-red);
+        color: var(--white);
+        border-radius: 20px;
+        padding: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .message-box.primary {
+        margin-bottom: 1rem;
+    }
+
+    .join-bottom-section {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .team-image-small {
+        flex: 0 0 60%;
+    }
+
+    .team-image-small img {
+        width: 80%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .message-box.secondary {
+        flex: 1;
+        font-size: 1.3rem;
+        padding: 1rem;
+        text-align: justify;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .join-content {
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .team-member {
+            flex: 0 0 calc(50% - 1rem);
+        }
+        
+        .join-layout {
+            flex-direction: column;
+        }
+
+        .team-image-large {
+            flex: 0 0 100%;
+        }
+
+        .team-image-large img {
+            max-height: 400px;
+            width: 80%;
+            object-fit: cover;
+        }
+
+        .join-message-container {
+            width: 100%;
+        }
+
+        .message-box {
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .join-section {
+            padding: 3rem 1rem;
+        }
+
+        .join-content h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .team-member {
+            flex: 0 0 100%;
+        }
+        
+        .team-section h1 {
+            font-size: 2.5rem;
+        }
+        
+        .team-section h2 {
+            font-size: 1.5rem;
+        }
+
+        .join-bottom-section {
+            flex-direction: column;
+        }
+
+        .team-image-small {
+            flex: 0 0 100%;
+        }
+
+        .team-image-small img {
+            max-height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .message-box.secondary {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        .message-box {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .join-section {
+            padding: 2rem 1rem;
+        }
+
+        .carousel-container {
+            padding: 0 20px;
+        }
+        
+        .join-content h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .join-layout {
+            gap: 1rem;
+        }
+
+        .team-image-large img,
+        .team-image-small img {
+            max-height: 250px;
+            border-radius: 15px;
+        }
+
+        .message-box {
+            padding: 1.25rem;
+            font-size: 1rem;
+            border-radius: 15px;
+        }
+
+        .message-box.secondary {
+            padding: 1rem;
+        }
+
+        .join-bottom-section {
+            gap: 0.75rem;
+        }
+    }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <!-- Logo -->
+            <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+            
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+                
+                <!-- Service Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle">Service</a>
+                    <div class="dropdown-menu service-dropdown">
+                        <div class="container-box">
+                            <div class="left-panel">
+                                <h4 class="dropdown-section-title">Services</h4>
+                                <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                                <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                                <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                            </div>
+                            <div class="right-panel">
+                                <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                                <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                                <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle">Industries</a>
+                    <div class="dropdown-menu industry-dropdown">
+                        <div class="container-box">
+                            <div class="left-panel">
+                                <h4 class="dropdown-section-title">Industries</h4>
+                                <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                                <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                                <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                            </div>
+                            <div class="right-panel">
+                                <h4 class="service-heading2">Recent Projects</h4>
+                                <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                                <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="career2.html" class="nav-item">Career</a>
+
+                <!-- About Us Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle">About Us</a>
+                    <div class="dropdown-menu aboutus-dropdown">
+                        <div class="container-box">
+                            <div class="left-panel">
+                                <h4 class="dropdown-section-title">About Us</h4>
+                                <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                                <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                            </div>
+                            <div class="right-panel">
+                                <h4 class="service-heading2">Our Team</h4>
+                                <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                                <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-item">Contact Us</a>
+            </nav>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons-header">
+                <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </header>
+
+        <!--Our Team Section-->
+        <section class="team-section">
+            <h1>Our Team</h1>
+            <h2>Meet the Team that makes<br>the magic happen</h2>
+
+            <div class="carousel-container">
+                <button class="carousel-button prev">&lt;</button>
+                <div class="carousel">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=550,fit=crop/mjE5l8bjwPCN8vaK/2-A3QpQ4o6JncR68De.jpeg" alt="Team Member">
+                        </div>
+                        <h3>Pavani Babburi</h3>
+                        <h4>Founder & CEO</h4>
+                        <p>Former Founder of InnoByte Solutions Pvt Ltd</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://i.pinimg.com/originals/d7/c7/cd/d7c7cd859b6755bced57e45ca80389d4.png" alt="Team Member">
+                        </div>
+                        <h3>Phani Kumar</h3>
+                        <h4>Digital Marketer</h4>
+                        <p>Digital Marketing of InnoByte Solutions Pvt Ltd</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://sreeramajay-portfolio.netlify.app/assets/SAjay-9aa2fe12.jpg" alt="Team Member">
+                        </div>
+                        <h3>Sreeram Teja Sri Ajay</h3>
+                        <h4>Full stack Developer and Digital Marketer</h4>
+                        <p>Full Stack Developer of InnoByte Solutions Pvt Ltd</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://i.pinimg.com/474x/59/0a/87/590a8778e0c7a775330b65c38edec5d3.jpg" alt="Team Member">
+                        </div>
+                        <h3>Harshavardan</h3>
+                        <h4>Employee</h4>
+                        <p>Employer of Spasnik Pvt Ltd</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Eo_circle_brown_white_letter-v.svg/2048px-Eo_circle_brown_white_letter-v.svg.png" alt="Team Member">
+                        </div>
+                        <h3>Varun Kumar</h3>
+                        <h4>Employee</h4>
+                        <p>Employer of Spasnik Pvt Ltd</p>
+                    </div>
+                    
+                </div>
+                <button class="carousel-button next">&gt;</button>
+            </div>
+        </section>
+
+        <section class="join-section">
+            <div class="join-content">
+                <h2>Join Our Team at<br>InnoByte Solutions Pvt Ltd!</h2>
+                
+                <div class="join-layout">
+                    <div class="team-image-large">
+                        <img src="assets/images/team-image3.png" alt="Team working together">
+                    </div>
+                    <div class="join-message-container">
+                        <div class="message-box primary">
+                            Join our dynamic team and be part of an innovative, fast-paced environment where your skills and enthusiasm can make a real impact! We're hiring for multiple roles—if you love tackling challenges and thrive on new opportunities, apply now and start your next great adventure with us!
+                        </div>
+                        <div class="join-bottom-section">
+                            <div class="team-image-small">
+                                <img src="assets/images/team-image5.jpg" alt="Team collaboration">
+                            </div>
+                            <div class="message-box secondary">
+                                Exciting opportunities<br> await!. Join our team <br>and make a difference
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer Section-->
+        <footer class="footer">
+            <div class="footer-container">
+            <div class="footer-logo">
+                <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+            </div>
+        
+            <div class="footer-sections">
+                <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+                    <li><a href="#">About InnoByte Solutions</a></li>
+                    <li><a href="#">Why Choose Us?</a></li>
+                    <li><a href="#">Get in Touch</a></li>
+                </ul>
+                </div>
+        
+                <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+                    <li><a href="consulting.html">Consulting and Staffing</a></li>
+                    <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+                </ul>
+                </div>
+        
+                <div class="footer-column">
+                <h3>Our Work</h3>
+                <ul>
+                    <li><a href="recentproject.html">Recent Projects</a></li>
+                    <li><a href="case-study.html">Case Study</a></li>
+                    <li><a href="testimonial.html">Client Testimonial</a></li>
+                </ul>
+                </div>
+        
+                <div class="footer-column newsletter">
+                <h3>Subscribe</h3>
+                <p>Join our newsletter to stay up to date on features and releases.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+                <p class="privacy-text">
+                    By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+                </p>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+                <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.querySelector('.carousel');
+        const teamMembers = document.querySelectorAll('.team-member');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+
+        let currentIndex = 0;
+        const totalMembers = teamMembers.length;
+        const membersPerView = 2; // Show 2 members at a time
+        const memberWidth = teamMembers[0].offsetWidth + 32; // Include gap (2rem)
+        let autoSlideTimer;
+
+        function updateCarousel() {
+            carousel.style.transition = 'transform 0.6s ease-in-out';
+            carousel.style.transform = `translateX(-${currentIndex * memberWidth}px)`;
+        }
+
+        function nextSlide() {
+            if (currentIndex < totalMembers - membersPerView) {
+                currentIndex++; // Move one step instead of two
+            } else {
+                currentIndex = 0; // Loop back to the beginning
+            }
+            updateCarousel();
+            resetAutoSlideTimer();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalMembers - membersPerView; // Go to last possible pair
+            }
+            updateCarousel();
+            resetAutoSlideTimer();
+        }
+
+        function resetAutoSlideTimer() {
+            clearTimeout(autoSlideTimer);
+            autoSlideTimer = setTimeout(nextSlide, 10000); // Move to the next slide after 10 sec
+        }
+
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+
+        resetAutoSlideTimer(); // Start 10-sec timer
+    });
+        </script>
+
+        <script src="assets/script/script.js"></script>
+    </body>
+    </html>

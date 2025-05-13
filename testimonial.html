@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonial</title>
+    <link rel="icon" href="assets/images/innobyte-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <style>
+        /* Inline styles from your code, with additions */
+        /* Adjusted styles to match the Hostinger image */
+        .recent-project-section {
+            background-color: #FAD02C;
+            margin-top: 68px;
+            padding: 30px 40px;
+            height: 85vh;
+        }
+
+        .recent-project-container {
+            gap: 30px;
+            display: flex;
+            flex-direction: row; /* Image on the left, text on the right */
+            align-items: center;
+        }
+
+        .recent-project-image-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 50%;
+            margin-left: 0;
+        }
+
+        .recent-project-image-wrapper {
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            position: relative;
+            min-height: 407px;
+        }
+
+        .recent-project-image {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .recent-project-content-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 60%;
+            margin-left: 20px;
+        }
+
+        .recent-project-content-wrapper {
+            display: flex;
+            margin-top: 13px;
+            width: 100%;
+            flex-direction: column;
+            font-family: Merriweather, sans-serif;
+            color: rgba(255, 255, 255, 1);
+            font-weight: 700;
+        }
+
+        .recent-project-title {
+            font-size: 48px;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .recent-project-description {
+            align-self: start;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .recent-project-quote-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .recent-project-quote-box {
+            border-radius: 15px;
+            background-color: #FAD02C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px solid rgba(255, 255, 255, 1);
+            width: 30%;
+            text-align: center;
+        }
+
+        .recent-project-quote-icon {
+            aspect-ratio: 1.14;
+            object-fit: contain;
+            object-position: center;
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
+        .recent-project-quote-heading {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .recent-project-quote-text {
+            font-size: 12px;
+            line-height: 1.4;
+            color: white;
+        }
+
+        .back-buttons {
+            display: inline-block;
+            background: #FAD02C;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .back-buttons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        /* Fix for the Back to Services button */
+        .back-button-recent-project-container {
+            margin-bottom: 20px;
+        }
+    
+        .back-button-recent-project a {
+            text-decoration: none;
+            color: #fff; /* Button text color */
+            background-color: #007bff; /* Button background color */
+            padding: 2px 10px; /* Adjusted padding for a larger button */
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold; /* Optional for better emphasis */
+            display: inline-block;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        
+        .back-button-recent-project a:hover {
+            background-color: #0056b3; /* Hover effect */
+        }
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+            
+            <!-- Service Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Service</a>
+                <div class="dropdown-menu service-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Services</h4>
+                            <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                            <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                            <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                            <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                            <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industries Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Industries</a>
+                <div class="dropdown-menu industry-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Industries</h4>
+                            <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                            <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                            <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Recent Projects</h4>
+                            <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                            <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Career</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">About Us</a>
+                <div class="dropdown-menu aboutus-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">About Us</h4>
+                            <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                            <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Our Team</h4>
+                            <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                            <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Contact Us</a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons-header">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <div class="recent-project-section">
+        <div class="recent-project-container">
+            <div class="recent-project-image-column">
+                <div class="recent-project-image-wrapper">
+                    <img src="assets/images/client-testimonial.png" class="recent-project-image" alt="Project Image" />
+                </div>
+            </div>
+            <div class="recent-project-content-column">
+                <div class="recent-project-content-wrapper">
+                    <h2 class="recent-project-title">Client Testimonial</h2>
+                    <p class="recent-project-description">
+                        InnoByte Solutions Pvt. Ltd. doesn’t just provide services we create success stories. 
+            Hear from the businesses that have partnered with us and transformed their challenges into triumphs. 
+            Our clients are the heart of our success, and their experiences reflect the power of our tailored solutions, innovative approaches, and relentless support. 
+            From streamlining operations to accelerating growth, we help organizations navigate today’s fast-paced landscape with confidence. Each testimonial is a testament to the way we make things happen. We’re not just another service provider we’re your dedicated ally in business success. 
+            Ready to see your story unfold? Let’s unlock your full potential together.
+                    </p>
+                </div>
+                <div class="recent-project-quote-container">
+                    <div class="recent-project-quote-box">
+                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/testimony-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--customer-testimonial-quality-management-user-feedback-pack-people-illustrations-4138020.png?f=webp" alt="Software Icon" class="recent-project-quote-icon">
+                        <h4 class="recent-project-quote-heading">Client 1</h4>
+                        <p class="recent-project-quote-text">"Professional team with exceptional results. Highly recommended!"</p>
+                    </div>
+                    <div class="recent-project-quote-box">
+                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/testimonials-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--feedback-review-rating-customer-reviews-pack-services-illustrations-3774593.png" alt="Healthcare Icon" class="recent-project-quote-icon">
+                        <h4 class="recent-project-quote-heading">Client 2</h4>
+                        <p class="recent-project-quote-text">"Professional team with exceptional results. Highly recommended!"</p>
+                    </div>
+                    <div class="recent-project-quote-box">
+                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/testimonial-3d-icon-download-in-png-blend-fbx-gltf-file-formats--excited-face-review-time-loyalty-alarm-internet-marketing-pack-seo-web-icons-6842407.png?f=webp" alt="E-commerce Icon" class="recent-project-quote-icon">
+                        <h4 class="recent-project-quote-heading">Client 3</h4>
+                        <p class="recent-project-quote-text">"Professional team with exceptional results. Highly recommended!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-buttons">
+        <a href="Innobyte-home.html.html#our-work">Back to Our Work</a>
+    </button>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+            </div>
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+                        <li><a href="#">About InnoByte Solutions</a></li>
+                        <li><a href="#">Why Choose Us?</a></li>
+                        <li><a href="#">Get in Touch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+                        <li><a href="consulting.html">Consulting and Staffing</a></li>
+                        <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Work</h3>
+                    <ul>
+                        <li><a href="recentproject.html">Recent Projects</a></li>
+                        <li><a href="case-study.html">Case Study</a></li>
+                        <li><a href="testimonial.html">Client Testimonial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column newsletter">
+                    <h3>Subscribe</h3>
+                    <p>Join our newsletter to stay up to date on features and releases.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="subscribe-button">Subscribe</button>
+                    </div>
+                    <p class="privacy-text">
+                        By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Settings</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script/script.js"></script>
+</body>
+</html>

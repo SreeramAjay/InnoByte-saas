@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
+    <style>
+        /* Desktop CSS */
+        .contact-section {
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .contact-container {
+            gap: 0px;
+            display: flex;
+            background-color: #D6001C;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .contact-info-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 28%;
+            margin-left: 20px;
+        }
+
+        .contact-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 10px;
+        }
+
+        .contact-heading {
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            justify-content: start;
+            font: 700 48px "Arial", sans-serif;
+            padding: 35px 6px 0.5px;
+        }
+
+        .info-content {
+            display: flex;
+            margin-top: 37px;
+            flex-direction: column;
+            font-family: "Arial", sans-serif;
+            color: #fff;
+            font-weight: 700;
+            justify-content: start;
+        }
+
+        .info-text-wrapper {
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .info-title {
+            font-size: 24px;
+            line-height: 26px;
+
+        }
+
+        .info-description {
+            align-self: start;
+            display: flex;
+            margin-top: 20px;
+            align-items: end;
+            gap: 20px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 23px;
+            justify-content: start;
+            text-align: justify;
+        }
+
+        .vertical-line {
+            width: 0;
+            height: 160px;
+            border: 2px solid #fff;
+        }
+
+        .description-text {
+            width: 270px;
+        }
+
+        .social-icons1 {
+            display: flex;
+            margin-top: 60px;
+            min-height: 40px;
+            width: 240px;
+            max-width: 100%;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .icon-container1 {
+            display: flex;
+            align-items: center;
+            gap: 40px 56px;
+            justify-content: start;
+        }
+
+        .social-icon1 {
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: center;
+            width: 40px;
+            align-self: stretch;
+            margin: auto 0;
+        }
+
+        /* Form styles */
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 30%;
+            margin-top: 4%;
+            margin-left: -10px;
+        }
+
+        .contact-form {
+            display: flex;
+            margin-top: 54px;
+            flex-grow: 1;
+            flex-direction: column;
+            font-family: "Arial", sans-serif;
+            font-weight: 700;
+            justify-content: start;
+        }
+
+        .form-wrapper {
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: start;
+            padding: 10px 0 130px;
+        }
+
+        .form-group {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            line-height: 1.2;
+            justify-content: start;
+        }
+
+        .message-form-group {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            width: 97%;
+            flex-direction: column;
+            line-height: 1.2;
+            justify-content: start;
+        }
+
+        .input-label {
+            color: #fff;
+            font-size: 22px;
+            z-index: 0;
+        }
+
+        .form-input {
+            background-color: rgb(255, 255, 255);
+            z-index: 0;
+            display: flex;
+            min-height: 57px;
+            margin-top: 13px;
+            max-width: 100%;
+            width: 434px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .message-area {
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000;
+            padding: 11px 14px 85px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .success-message {
+            display: none;
+            color: #D6001C;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #D6001C;
+            border-radius: 5px;
+            background-color: #ffffff;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .submit-button {
+            align-self: stretch;
+            background-color: #fff;
+            box-shadow: 5px 5px 3px #000;
+            position: absolute;
+            min-height: 30px;
+            width: 120px;
+            max-width: 80%;
+            gap: 8px;
+            font-size: 22px;
+            color: #D6001C;
+            font-weight: 900;
+            white-space: nowrap;
+            bottom: 34px;
+            height: 50px;
+            padding: 6px 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Map styles */
+        .map-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 33%;
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+
+        .map-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+            justify-content: start;
+            margin: auto 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .map-image {
+            aspect-ratio: 1.27;
+            object-fit: contain;
+            object-position: center;
+            width: 95%;
+        }
+
+        /* Mobile Responsive CSS */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .contact-info-column, .form-column, .map-column {
+                width: 100%;
+                margin: 0;
+            }
+
+            .contact-heading {
+                font-size: 46px;
+                padding: 20px 10px;
+            }
+
+            .info-title {
+                font-size: 20px;
+            }
+
+            .info-description {
+                font-size: 16px;
+                line-height: 18px;
+            }
+
+            .vertical-line {
+                height: 70px;
+            }
+
+            .description-text {
+                width: 100%;
+            }
+
+            .social-icons1 {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .icon-container1 {
+                gap: 20px;
+            }
+
+            .social-icon1 {
+                width: 30px;
+            }
+
+            .form-column {
+                margin-top: 20px;
+            }
+
+            .message-form-group {
+                width: 81%;
+            }
+
+            .form-input {
+                width: 80%;
+                max-width: 100%;
+            }
+
+            .message-area {
+                padding: 10px;
+            }
+
+            .submit-button {
+                position: relative;
+                width: 20%;
+                bottom: 0;
+                margin-top: 20px;
+            }
+
+            .map-image {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info-column">
+                <div class="contact-info-wrapper">
+                    <div class="contact-heading">Get in Touch</div>
+                    <div class="info-content">
+                        <div class="info-text-wrapper">
+                            <div class="info-title">Have questions or ready to collaborate?</div>
+                            <div class="info-description">
+                                <div class="vertical-line"></div>
+                                <div class="description-text">
+                                    Reach out to Spasnik Solution Pvt Ltd today! Let's work together to turn your vision into reality and drive success for your business. We're here to help—connect with us now!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-icons1">
+                            <div class="icon-container1">
+                                <img src="facebook-icon.png" alt="Facebook" class="social-icon1">
+                                <img src="instagram-icon.png" alt="Instagram" class="social-icon1">
+                                <img src="twitter-icon.png" alt="Twitter" class="social-icon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-column">
+                <form id="contactForm" class="contact-form" action="/submit" method="POST">
+                    <div class="form-wrapper">
+                        <div class="form-group">
+                            <label class="input-label" for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-label" for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="message-form-group">
+                            <label class="input-label" for="message">Message *</label>
+                            <textarea id="message" name="message" class="message-area" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Submit</button>
+                        <div id="successMessage" class="success-message">
+                            Thank you! Your message has been sent.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="map-column">
+                <div class="map-wrapper">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/5eec7c6221b5e251d843802162546fa5c3e020592f15783c030cf6af9f604c32?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Map" class="map-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                });
+
+                if (response.ok) {
+                    document.getElementById("successMessage").style.display = "block";
+                    form.reset(); // Reset form after submission
+                } else {
+                    alert("❌ Something went wrong. Please try again.");
+                }
+            } catch (error) {
+                alert("❌ Failed to send. Please check your internet connection.");
+            }
+        });
+    </script>
+</body>
+</html>

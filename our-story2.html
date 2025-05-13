@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>InnoByte Solutions – Story · Vision · Values · Mission</title>
+
+  <!-- Font Awesome for icons -->
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Inline CSS -->
+  <style>
+    :root {
+      --red:    #d51a2a;
+      --blue:   #1976d2;
+      --yellow: #ffc107;
+      --white:  #fff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html { width:100%; height:100%; font-family: Georgia, serif; }
+
+    .slider-container {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      height: 100vh;
+    }
+
+    /* RED PANEL */
+    .slide-panel {
+      position: relative;
+      background: var(--red);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-panel header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 2rem;
+      color: var(--white);
+    }
+    .slide-title {
+      font-size: 3rem;
+      color: var(--white);
+    }
+    .slide-title span {
+      color: var(--yellow);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 40px;
+      flex: 1;
+      margin-top: 40px;
+    }
+
+    /* CAROUSEL */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slides img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      user-select: none;
+    }
+    .arrow {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .carousel .prev { position: absolute; left: 10px; }
+    .carousel .next { position: absolute; right: 10px; }
+
+    .indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+    }
+    .indicators .dot {
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+    }
+    .indicators .dot.active {
+      background: var(--white);
+    }
+
+    /* SECTION TEXT */
+    .story {
+      color: var(--white);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* SOCIAL ICONS */
+    .social-icons {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      display: flex;
+      gap: 20px;
+    }
+    .social-icons a {
+      color: var(--white);
+      font-size: 1.5rem;
+      transition: opacity 0.3s;
+    }
+    .social-icons a:hover {
+      opacity: 0.7;
+    }
+
+    /* BLUE PANEL */
+    .side-panel {
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .side-panel .arrow.next {
+      color: var(--white);
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ─── OVERRIDES ───────────────────────────────────────────── */
+    /* 1) Hide the blue sidebar completely */
+    .side-panel {
+      display: none !important;
+    }
+    /* 2) Expand the red panel to full width */
+    .slider-container {
+      grid-template-columns: 1fr !important;
+    }
+    /* 3) Push arrows to absolute edges */
+    .carousel .prev { left: 0 !important; }
+    .carousel .next { right: 0 !important; }
+    /* 4) Optional: enlarge hit‑area */
+    .carousel .arrow { padding: 20px; }
+  </style>
+</head>
+
+<body>
+  <div class="slider-container">
+    <!-- RED PANEL -->
+    <div class="slide-panel">
+      <header>
+        <h1 class="logo">InnoByte Solutions</h1>
+        <h2 class="slide-title">Our <span>Story</span></h2>
+      </header>
+
+      <div class="content">
+        <!-- IMAGE CAROUSEL -->
+        <div class="carousel">
+          <button class="arrow prev"><i class="fas fa-arrow-left"></i></button>
+          <div class="slides">
+            <img src="images/slide1.jpg" alt="Story Image" />
+            <img src="images/slide2.jpg" alt="Vision Image" />
+            <img src="images/slide3.jpg" alt="Values Image" />
+            <img src="images/slide4.jpg" alt="Mission Image" />
+          </div>
+          <button class="arrow next"><i class="fas fa-arrow-right"></i></button>
+          <div class="indicators"></div>
+        </div>
+
+        <!-- SECTION TEXT -->
+        <div class="story">
+          <p id="section-text">
+            InnoByte Solutions Pvt Ltd was founded with a vision to redefine
+            possibilities through innovation. Starting as a small team of
+            passionate individuals, we have grown into a dynamic force in the
+            tech industry, driven by a commitment to excellence. Our journey is
+            one of creativity, resilience, and a relentless pursuit of
+            transforming challenges into opportunities for growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- BLUE PANEL (hidden by CSS) -->
+    <div class="side-panel">
+      <button class="arrow next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Inline JS (unchanged) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides    = document.querySelectorAll('.slides img');
+      const prevBtn   = document.querySelector('.carousel .prev');
+      const nextBtn   = document.querySelector('.carousel .next');
+      const blueNext  = document.querySelector('.side-panel .next');
+      const indicators= document.querySelector('.indicators');
+      const titleEl   = document.querySelector('.slide-title');
+      const textEl    = document.getElementById('section-text');
+
+      const sections = [
+        { key: 'Story',  text: `InnoByte Solutions Pvt Ltd was founded with a vision to redefine possibilities through innovation. Starting as a small team of passionate individuals, we have grown into a dynamic force in the tech industry, driven by a commitment to excellence. Our journey is one of creativity, resilience, and a relentless pursuit of transforming challenges into opportunities for growth.` },
+        { key: 'Vision', text: `To become a global leader in bespoke software solutions, empowering businesses to innovate and thrive in an ever‑changing digital landscape. We envision a future where our technology bridges gaps, fosters collaboration, and delivers measurable impact for our clients and communities.` },
+        { key: 'Values', text: `• Innovation – We pursue cutting‑edge ideas and embrace change.\n• Integrity – Honesty and transparency guide every decision.\n• Excellence – We set the bar high and never settle for “good enough.”\n• Collaboration – Together, we achieve more than we ever could alone.\n• Customer‑First – Your success is our success.` },
+        { key: 'Mission', text: `Our mission is to deliver scalable, secure, and user‑centric software that solves real‑world problems. We commit to ongoing partnership, continuous improvement, and exceptional service, ensuring every project exceeds expectations.` }
+      ];
+
+      let current = 0;
+      sections.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'dot' + (i===0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        indicators.append(dot);
+      });
+
+      function update() {
+        const w = slides[0].clientWidth;
+        document.querySelector('.slides')
+                .style.transform = `translateX(-${current * w}px)`;
+        titleEl.innerHTML = `Our <span>${sections[current].key}</span>`;
+        textEl .innerHTML = sections[current].text.replace(/\n/g,'<br>');
+        document.querySelectorAll('.dot')
+                .forEach((d,i) => d.classList.toggle('active', i===current));
+      }
+
+      function goTo(i) { current = i; update(); }
+
+      prevBtn.addEventListener('click', () => { current = (current-1+sections.length)%sections.length; update() });
+      nextBtn.addEventListener('click', () => { current = (current+1)%sections.length; update() });
+      blueNext.addEventListener('click', () => { current = (current+1)%sections.length; update() });
+      window.addEventListener('resize', update);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding Identity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .brand-identity-container {
+            display: flex;
+            align-items: center;
+            gap: 500px;
+            background-color: #CF1B2E;
+            width: 100%;
+            padding: 1px 0 36px;
+        }
+        .image-section {
+            position: relative; /* Allows absolute positioning inside */
+            display: flex;
+            align-items: center;
+        }
+        .number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #FFF;
+            position: absolute;
+            bottom: 2px; /* Moves the number downward */
+            left: 45%;
+            transform: translateX(-150%); 
+        }
+        .image-section img {
+            width: 200px;
+        }
+        .text-section {
+            max-width: 500px;
+            color: #FFF;
+        }
+        .text-section h2 {
+            color: #FFF;;
+        }
+    </style>
+</head>
+<body>
+    <div class="brand-identity-container">
+        <div class="image-section">
+            <div class="number">06</div>
+            <img src="assets/images/Image.png.png" alt="Branding Image">
+        </div>
+        <div class="text-section">
+            <h2>Branding Identity</h2>
+            <p>Branding and identity development is about creating a cohesive look and feel for your business across all touchpoints. This includes designing logos, choosing color schemes, crafting messaging, and setting a tone that reflects your values. Consistent branding builds recognition and trust, helping customers identify and connect with your business more easily.</p>
+        </div>
+    </div>
+</body>
+</html>

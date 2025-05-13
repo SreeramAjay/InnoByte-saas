@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Inter, sans-serif;
+    }
+    .contact-section {
+      display: flex;
+      background-color: #D6001C;
+      color: white;
+      padding: 15px;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 110vh;
+      gap: 60px; /* Added spacing between form and info container */
+    }
+    .contact-form-container {
+      flex: 1;
+      max-width: 550px;
+      text-align: center;
+    }
+    .contact-title {
+      font-family: Merriweather, serif;
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .accent-dot {
+      color: #FFE042;
+    }
+    .contact-description {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .name-fields {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+    .form-input {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-bottom: 2px solid white;
+      padding: 15px;
+      color: white;
+      font-size: 20px;
+      flex: 1;
+      outline: none;
+    }
+    .form-input::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+    .email-input, .message-input {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .message-input {
+      height: 150px;
+    }
+    .submit-button {
+      background: white;
+      color: #D6001C;
+      font-weight: bold;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+      width: 200px;
+      height: 50px;
+    }
+    .contact-info-container {
+      flex: 1;
+      position: relative;
+      max-width: 750px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      
+      position: relative;
+      top: 0;
+      width: 160%;
+    }
+    .social-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .info-card {
+      position: relative;
+      text-align: center;
+      border-radius: 0 0 0 60px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .info-card img {
+      width: 100%;
+      height: 150%;
+      display: block;
+    }
+    .info-content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      color: black;
+      padding: 20px;
+      font-size: 18px;
+    }
+    @media (max-width: 991px) {
+      .contact-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .name-fields {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script>
+    function validateForm(event) {
+      const emailInput = document.querySelector('.email-input');
+      const emailValue = emailInput.value;
+      if (!emailValue.includes('@')) {
+        alert('Please enter a valid email address with "@" symbol.');
+        event.preventDefault();
+      }
+    }
+  </script>
+</head>
+<body>
+  <section class="contact-section">
+    <div class="contact-form-container">
+      <h1 class="contact-title">Get in Touch<span class="accent-dot">.</span></h1>
+      <p class="contact-description">Need help with something? Want a demo? Get in touch with our friendly team, and we’ll reach out.</p>
+      
+      <form class="contact-form" onsubmit="validateForm(event)">
+        <div class="name-fields">
+          <input type="text" class="form-input" placeholder="First Name *" required>
+          <input type="text" class="form-input" placeholder="Last Name *" required>
+        </div>
+        <input type="email" class="form-input email-input" placeholder="Enter your Email *" required>
+        <textarea class="form-input message-input" placeholder="Enter your Message *" required></textarea>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+    <div class="contact-info-container">
+      <div class="social-links">
+        <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/f8a16fc9411b5e2809de7d074b8d2993eda2d1a7a7f1825dfb4521d4a0f5ec27" class="social-icon">
+        <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/271a8b9dec88b12c45e55123467a340bdfc3223bc34a17e030cc9589349da48b" class="social-icon">
+        <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/5cfbf2565662085fd6350ae388c778c3ad98d1791154d4a410b401d7163405ef" class="social-icon">
+        <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/dfa82ee84017187b939f9429db68697bba24ca2dfd9c50860e95ce35cf49fa2c" class="social-icon">
+      </div>
+      <div class="info-card">
+        <img src="assets/images/Get-in-touchbg.png" alt="Background">
+        <div class="info-content">
+          <h2>Have questions or ready to collaborate?</h2>
+          <p>Reach out to Spasnik Solution Pvt Ltd today! Let’s turn your vision into reality and drive success for your business. We’re here to help—connect with us now!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <link rel="icon" href="assets/images/favicon-logo2.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+    .story-section {
+      background-color: #FAD02C;
+      padding: 20px 0; /* Adjusts top & bottom padding to reduce height */
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 1);
+      min-height: 90vh; /* Reduces the overall section height */
+      padding-top: calc(10vh + 20px); /* Adjust based on header height */
+      margin-top: 12px;
+    }
+
+    .story-container {
+      display: flex;
+      align-items: center; /* Ensures content is vertically aligned */
+      gap: 15px;
+      max-height: 85vh; /* Limits height */
+    }
+
+    .image-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 41%;
+    }
+
+    .story-image {
+        width: 100%;
+        height: 112vh; /* Decreased height */
+        object-fit: cover;
+        animation: moveImage 2s ease-in-out forwards;
+    }
+
+      .content-column {
+        width: 55%; /* Reduce width to prevent overflow */
+        padding-left: 20px; /* Add some padding to avoid content cut-off */
+        overflow-wrap: break-word; /* Prevents long words from breaking layout */
+      }
+
+      .contents-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        font-family: Merriweather, sans-serif;
+        color: rgba(255, 255, 255, 1);
+        margin: 20px 0;
+        animation: moveText 2s ease-in-out forwards;
+      }
+
+      .story-heading {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+        align-self: center;
+        font: Merriweatherr, sans-serif;
+        margin-bottom: 30px;
+      }
+
+      .story-text {
+        font-size: 20px;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        margin-right: 10px;
+        font: Merriweather, sans-serif;
+        text-align: justify;
+        width: 800px;
+      }
+
+      /* Text animation: Right to Left */
+      @keyframes moveText {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Image animation: Left to Right */
+      @keyframes moveImage {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .story-container {
+          flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2px; /* Adds space between image and content */
+        }
+
+        .story-section {
+            min-height: 50vh; /* Reduce height further on smaller screens */
+        }
+        .image-column {
+            width: 55%; /* Keeps the image on the left side */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Ensures the image stays vertically centered */
+        }
+        .content-column, .image-column {
+            width: 100%;
+        }
+        .story-image {
+          height: auto; /* Adjusts to content size */
+          max-height: 40vh; /* Limits excessive height */
+        }
+
+        .content-column {
+            width: 50%; /* Keeps content on the right side */
+            padding: 15px;
+            margin-right: 10px;
+        }
+
+        .contents-wrapper {
+            max-width: 100%;
+        }
+
+        .story-heading {
+            font-size: 28px; /* Decreased heading size */
+        }
+
+        .story-text {
+            font-size: 9px; /* Decreased text size */
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+    }
+    </style>
+</head>
+<body>
+  <header class="header">
+        <!-- Logo -->
+        <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+            
+            <!-- Service Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Service</a>
+                <div class="dropdown-menu service-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Services</h4>
+                            <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                            <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                            <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                            <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                            <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industries Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Industries</a>
+                <div class="dropdown-menu industry-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Industries</h4>
+                            <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                            <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                            <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Recent Projects</h4>
+                            <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                            <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Career</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">About Us</a>
+                <div class="dropdown-menu aboutus-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">About Us</h4>
+                            <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                            <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Our Team</h4>
+                            <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                            <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Contact Us</a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons-header">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!--Our Story Section-->
+    <section class="story-section">
+        <div class="story-container">
+          <div class="image-column">
+            <img
+              loading="lazy"
+              src="assets/images/spasnik-our-story.png"
+              class="story-image"
+              alt="InnoByte Solutions company story visual representation"
+            />
+          </div>
+          <div class="content-column">
+            <div class="contents-wrapper">
+              <h2 class="story-heading">Our Story</h2>
+              <p class="story-text">
+                Every great journey starts with a vision, and ours was clear from the
+                start—to redefine possibilities through innovation. InnoByte Solutions
+                Pvt Ltd was born from a simple yet powerful idea: to create
+                intelligent solutions that not only solve challenges but also inspire
+                transformation. We are more than just a company; we are a team of
+                dreamers, thinkers, and doers who believe in the power of technology
+                to shape a better future.
+                <br />
+                <br />
+                From the beginning, we set out to build something extraordinary a
+                place where creativity meets technology, where ideas turn into
+                reality, and where every challenge is an opportunity to excel. With
+                every project, we push boundaries, rethink possibilities, and craft
+                solutions that make an impact.
+                <br />
+                <br />
+                As we expand, we are looking for talented minds to join us on this
+                journey. If you're someone who thrives on challenges, embraces
+                creativity, and seeks to make a real difference, InnoByte Solutions Pvt
+                Ltd is where you belong.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Footer Section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+        </div>
+    
+        <div class="footer-sections">
+          <div class="footer-column">
+            <h3>Information</h3>
+            <ul>
+              <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+              <li><a href="#">About InnoByte Solutions</a></li>
+              <li><a href="#">Why Choose Us?</a></li>
+              <li><a href="#">Get in Touch</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-column">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+              <li><a href="consulting.html">Consulting and Staffing</a></li>
+              <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-column">
+            <h3>Our Work</h3>
+            <ul>
+              <li><a href="recentproject.html">Recent Projects</a></li>
+              <li><a href="case-study.html">Case Study</a></li>
+              <li><a href="testimonial.html">Client Testimonial</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-column newsletter">
+            <h3>Subscribe</h3>
+            <p>Join our newsletter to stay up to date on features and releases.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email">
+              <button class="subscribe-button">Subscribe</button>
+            </div>
+            <p class="privacy-text">
+              By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+            </p>
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookies Settings</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="assets/script/script.js"></script>
+</body>
+</html>

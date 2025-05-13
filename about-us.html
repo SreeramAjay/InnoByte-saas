@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About InnoByte Solutions</title>
+    <style>
+        .about-section {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 42px 20px;
+            align-items: center;  /* Centers everything */
+        }
+
+        .section-header {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            width: 100%; 
+            max-width: 1200px; 
+            margin: auto; 
+        }
+
+        .main-title {
+            color: #D6001C;
+            font-size: 45px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .sub-title {
+            text-align: right; 
+            color: #D6001C; 
+            font-size: 18px; 
+            font-weight: 500; 
+        }
+
+        .content-wrapper-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            height: 500px;
+            position: relative;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 300%; /* For 3 slides */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #D6001C;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: stretch;
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .about-text {
+            flex: 1;
+            padding: 35px;
+            font-family: "Arial", sans-serif;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .pagination-dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: blue;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-image img {
+                border-radius: 20px 20px 0 0;
+            }
+
+            .about-text {
+                text-align: center;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-section">
+        <div class="section-header">
+            <h2 class="main-title">About InnoByte Solutions</h2>
+            <h5 class="sub-title">Empowering your success</h5>
+        </div>
+
+        <div class="content-wrapper-container">
+            <div class="wrapper">
+                <div class="content-wrapper">
+                    <div class="about-container">
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="assets/images/about.jpg" alt="Laptop displaying analytics dashboard">
+                            </div>
+                            <div class="about-text">
+                                <h3>Welcome to InnoByte Solutions Pvt Ltd</h3>
+                                <p>
+                                    Partner with InnoByte Solutions for premier consulting and staffing services in IT and engineering.
+                                    Our team of experienced professionals provides specialized expertise, helping you navigate complex
+                                    challenges and drive optimal results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="about-container">
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="assets/images/Mission.jpg" alt="InnoByte Solutions Mission">
+                            </div>
+                            <div class="about-text">
+                                <h3>Our Mission of InnoByte Solutions Pvt Ltd</h3>
+                                <p>
+                                    We aim to be a global leader in IT and engineering solutions, driving success through innovation and excellence. 
+                                    By leveraging cutting-edge technology, we empower businesses to adapt and thrive in the ever-evolving digital landscape.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="about-container">
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="assets/images/Vision.jpg" alt="InnoByte Solutions Vision">
+                            </div>
+                            <div class="about-text">
+                                <h3>Our Vision InnoByte Solutions Pvt Ltd</h3>
+                                <p>
+                                    Our mission is to provide top-tier consulting and staffing services that align with our clients' unique needs. 
+                                    Through expertise, integrity, and a customer-centric approach, we strive to build long-term partnerships and drive transformative business success.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="pagination-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+        const dots = document.querySelectorAll(".dot");
+        let currentIndex = 0;
+        let isDragging = false;
+        let startX, currentTranslate, prevTranslate, animationID;
+    
+        function showContent(index) {
+            wrapper.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("active", i === index);
+            });
+        }
+    
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % dots.length;
+            showContent(currentIndex);
+        }
+    
+        let slideInterval = setInterval(nextSlide, 5000);
+    
+        function goToSlide(index) {
+            clearInterval(slideInterval);
+            currentIndex = index;
+            showContent(index);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+    
+        function touchStart(e) {
+            isDragging = true;
+            startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+            prevTranslate = currentIndex * -100;
+            cancelAnimationFrame(animationID);
+        }
+    
+        function touchMove(e) {
+            if (!isDragging) return;
+            const currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+            const diff = (currentX - startX) / wrapper.clientWidth * 100;
+            wrapper.style.transform = `translateX(${prevTranslate + diff}%)`;
+        }
+    
+        function touchEnd() {
+            isDragging = false;
+            const moveBy = (parseFloat(wrapper.style.transform.replace("translateX(", "").replace("%)", "")) - prevTranslate);
+            if (moveBy < -10 && currentIndex < dots.length - 1) {
+                currentIndex++;
+            } else if (moveBy > 10 && currentIndex > 0) {
+                currentIndex--;
+            }
+            showContent(currentIndex);
+        }
+    
+        wrapper.addEventListener("mousedown", touchStart);
+        wrapper.addEventListener("mousemove", touchMove);
+        wrapper.addEventListener("mouseup", touchEnd);
+        wrapper.addEventListener("mouseleave", touchEnd);
+        wrapper.addEventListener("touchstart", touchStart);
+        wrapper.addEventListener("touchmove", touchMove);
+        wrapper.addEventListener("touchend", touchEnd);
+    
+        showContent(currentIndex);
+    </script>    
+</body>
+</html>

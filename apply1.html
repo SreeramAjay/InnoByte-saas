@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers & Application – InnoByte Solutions</title>
+  <link rel="stylesheet" href="assets/css/styles.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Reset & body */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: Arial, sans-serif; }
+
+    /* Overall page bg */
+    body { background-color: #FAD02C; color: white; }
+
+    /* Centered wrapper */
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px 10px; }
+
+    /* Jobs Grid Section with background image */
+    .jobs-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      width: 100%;
+      padding: 2rem;
+      margin-top: 70px
+    }
+    .jobs-title { font-size: 3.2rem; font-weight: 700; text-align: center; color: white; }
+    .jobs-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 50px; }
+    .job-card {
+      background: rgba(220, 38, 38, 0.85); /* semi-transparent overlay */
+      border: 1px solid white;
+      border-radius: 1rem;
+      width: 350px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    .job-card:hover { transform: scale(1.05) }
+    .job-title { font-size: 1.6rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
+    .job-card p { font-size: 1.1rem; flex-grow: 1; text-align: justify; width: 100% }
+    .apply-button { margin-top: 1rem; background: white; color: #FAD02C; border: none; padding: 0.75rem 1.5rem; font-weight: 900; border-radius: 4px; cursor: pointer; }
+
+    /* Job Detail Section */
+    .job-detail { display: none; flex-wrap: wrap; align-items: center; gap: 2rem; margin: 2rem 0; }
+    .job-text { flex: 1 1 300px; }
+    .job-text h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .job-text p { font-size: 1.2rem !important; line-height: 1.6; text-align: justify }
+    .job-image { flex: 1 1 300px; text-align: center; }
+    .job-image img { max-width: 100%; border-radius: 50%; }
+
+    #detail-desc {
+      font-size: 1.2rem !important;
+      line-height: 1.8rem   !important;
+      text-align: justify;
+    }
+
+    /* Application Form */
+    .form-section {
+      display: none;
+      background: white;
+      color: #333;
+      padding: 2rem 2rem 3rem 2rem; /* Increased bottom padding to ensure space for the button */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      position: relative; /* Ensure the form section is positioned properly */
+    }
+    .form-section h2 { color: #FAD02C; text-align: center; font-size: 1.75rem; margin-bottom: 1rem; }
+    .form-section p { text-align: justify; margin-bottom: 2rem; font-size: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-weight: bold; margin-bottom: 0.5rem; }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .submit-button {
+      background: #FAD02C;
+      color: white;
+      border: none;
+      padding: 1rem 1.75rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 1rem auto 0 auto; /* Added top margin to ensure spacing from the last form group */
+      width: fit-content; /* Ensure the button doesn't stretch unnecessarily */
+      transition: transform 0.3s ease;
+    }
+    .submit-button:hover { background: #b9151a; transform: scale(1.05) }
+
+    @media (max-width: 768px) {
+      .job-detail { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <!-- Logo -->
+    <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+    
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+        <a href="Innobyte-home.html" class="nav-item">Home</a>
+        
+        <!-- Service Dropdown -->
+        <div class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">Service</a>
+            <div class="dropdown-menu service-dropdown">
+                <div class="container-box">
+                    <div class="left-panel">
+                        <h4 class="dropdown-section-title">Services</h4>
+                        <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                        <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                        <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                    </div>
+                    <div class="right-panel">
+                        <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                        <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                        <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Industries Dropdown -->
+        <div class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">Industries</a>
+            <div class="dropdown-menu industry-dropdown">
+                <div class="container-box">
+                    <div class="left-panel">
+                        <h4 class="dropdown-section-title">Industries</h4>
+                        <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                        <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                        <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                    </div>
+                    <div class="right-panel">
+                        <h4 class="service-heading2">Recent Projects</h4>
+                        <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                        <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="career2.html" class="nav-item">Career</a>
+
+        <!-- About Us Dropdown -->
+        <div class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">About Us</a>
+            <div class="dropdown-menu aboutus-dropdown">
+                <div class="container-box">
+                    <div class="left-panel">
+                        <h4 class="dropdown-section-title">About Us</h4>
+                        <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                        <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                    </div>
+                    <div class="right-panel">
+                        <h4 class="service-heading2">Our Team</h4>
+                        <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                        <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="nav-item">Contact Us</a>
+    </nav>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons-header">
+        <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</header>
+
+<!--Apply Job Page-->
+  <div class="container">
+    <!-- 1) Jobs Grid -->
+    <section class="jobs-section">
+      <h1 class="jobs-title">Job Roles at Spasnik Solution Pvt Ltd</h1>
+      <div id="jobs-grid" class="jobs-grid"></div>
+    </section>
+
+    <!-- 2) Selected Job Detail -->
+    <section id="job-detail" class="job-detail">
+      <div class="job-text">
+        <h1 id="detail-title"></h1>
+          <div id="detail-desc"></div>
+      </div>
+      <div class="job-image">
+        <img id="detail-image" src="" alt="Job Image" />
+      </div>
+    </section>
+
+    <!-- 3) Application Form -->
+    <section id="application-section" class="form-section">
+      <h2>Apply for <span id="role-title"></span></h2>
+      <p id="role-desc"></p>
+      <form id="application-form" action="/submit-application" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="job-role" id="job-role-input" />
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="resume">Upload Resume</label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+        </div>
+        <div class="form-group">
+          <label for="coverLetter">Cover Letter</label>
+          <textarea id="coverLetter" name="coverLetter" placeholder="Why are you a great fit?" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Submit Application</button>
+      </form>
+    </section>
+  </div>
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+    <div class="footer-logo">
+        <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+    </div>
+
+    <div class="footer-sections">
+        <div class="footer-column">
+        <h3>Information</h3>
+        <ul>
+            <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+            <li><a href="#">About InnoByte Solutions</a></li>
+            <li><a href="#">Why Choose Us?</a></li>
+            <li><a href="#">Get in Touch</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-column">
+        <h3>Our Services</h3>
+        <ul>
+            <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+            <li><a href="consulting.html">Consulting and Staffing</a></li>
+            <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-column">
+        <h3>Our Work</h3>
+        <ul>
+            <li><a href="recentproject.html">Recent Projects</a></li>
+            <li><a href="case-study.html">Case Study</a></li>
+            <li><a href="testimonial.html">Client Testimonial</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-column newsletter">
+        <h3>Subscribe</h3>
+        <p>Join our newsletter to stay up to date on features and releases.</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="subscribe-button">Subscribe</button>
+        </div>
+        <p class="privacy-text">
+            By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+        </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+        <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookies Settings</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+    <script>
+    // Job data
+      const jobs = [
+        {
+          title: "Digital Marketing Specialist",
+          description: "We are seeking a Digital Marketing Specialist to develop, implement, track, and optimize our digital marketing campaigns across all digital channels. The ideal candidate is creative, data-driven, and passionate about digital marketing. You will work closely with content creators, designers, and product teams to execute strategies that drive brand awareness, website traffic, customer engagement, and lead generation.",
+          image: "assets/images/digital-role.png",
+          responsibilities: [
+            "Plan and execute digital marketing campaigns including SEO/SEM, email, social media, and online advertising.",
+            "Manage content creation and publishing on websites, blogs, and social media platforms to attract and engage target audiences.",
+            "Monitor and analyze campaign performance using tools such as Google Analytics, Facebook Insights, and marketing automation platforms.",
+            "Optimize content and ad copy for SEO and conversion across all digital platforms.",
+            "Manage paid advertising campaigns (Google Ads, Meta Ads, LinkedIn Ads, etc.) to maximize ROI.",
+            "Collaborate with the design team to produce compelling graphics, videos, and promotional materials.",
+            "Perform keyword research and competitor analysis to guide content and campaign strategy.",
+            "Track and report on key metrics such as traffic, engagement, conversion rates, and ROI.",
+            "Stay up to date with industry trends and emerging digital tools, platforms, and best practices.",
+          ]
+        },
+        {
+          title: "IT Engineer",
+          description: "An IT Engineer is responsible for maintaining, implementing, and supporting an organization’s technology infrastructure. This includes managing hardware, software, networks, and systems to ensure optimal performance, security, and availability. The IT Engineer works closely with other departments to support business needs through effective use of technology.",
+          image: "assets/images/it-engineer-role.png",
+          responsibilities: [
+            "Install, configure, and maintain servers, networks, and IT systems.",
+            "Monitor system performance and troubleshoot issues proactively.",
+            "Ensure network security and data integrity.",
+            "Provide Level 1 and 2 technical support to end-users.",
+            "Diagnose and resolve hardware, software, and network issues.",
+            "Document issues and resolutions for future reference.",
+            "Manage software installations, updates, and patches.",
+            "Maintain inventory of hardware and perform necessary upgrades.",
+            "Evaluate and recommend new hardware and software solutions.",
+            "Implement and enforce security policies and protocols.",
+            "Conduct regular backups and system recovery drills.",
+          ]
+        },
+        {
+          title: "Consultant",
+          description: "A Consultant is a professional who provides expert advice and tailored solutions to organizations in a specific field such as business strategy, information technology, human resources, finance, or operations. Consultants assess business needs, analyze data, identify areas for improvement, and develop strategies that help clients solve complex problems, improve efficiency, and achieve their goals.",
+          image: "assets/images/consulting-role.png",
+          responsibilities: [
+            "Problem-solving: Understand client challenges and develop actionable solutions.",
+            "Expertise: Leverage deep knowledge in a specific domain to offer informed guidance.",
+            "Communication: Clearly present findings, reports, and recommendations to stakeholders.",
+            "Collaboration: Work closely with client teams and internal stakeholders to ensure alignment.",
+            "Change Management: Support clients through transitions, such as new systems, strategies, or organizational changes.",
+            "Project Delivery: Plan and execute consultancy projects within defined timelines and budgets.",
+          ]
+        },
+        {
+          title: "Staffing",
+          description: "A Staffing Specialist plays a key role in identifying, recruiting, and placing qualified candidates to meet the staffing needs of an organization or client. This professional ensures that the right talent is sourced, screened, and hired to fill open positions across various departments or roles. Staffing Specialists work closely with hiring managers to understand the specific needs of each role and ensure that candidates are a good fit for both the job and the company culture. ",
+          image: "assets/images/staffing-role.png",
+          responsibilities: [
+            "Recruitment: Source, interview, and evaluate candidates through various channels such as job boards, social media, and recruiting agencies.",
+            "Candidate Screening: Conduct initial screenings to assess qualifications, experience, and cultural fit.",
+            "Job Matching: Match candidates to job openings based on their skills, experience, and career goals.",
+            "Collaboration: Work closely with hiring managers to define job requirements, expectations, and timelines for recruitment.",
+            "Onboarding Support: Facilitate the onboarding process for new hires, including background checks, documentation, and orientation.",
+            "Talent Pool Development: Build and maintain a network of potential candidates for current and future job openings.",
+            "Compliance: Ensure all hiring practices comply with legal, ethical, and company guidelines.",
+            "Reporting: Track and report on recruitment metrics, including time-to-hire, cost-per-hire, and candidate quality.",
+          ]
+        }
+      ];
+
+      // DOM elements
+      const grid = document.getElementById('jobs-grid');
+      const detailSection = document.getElementById('job-detail');
+      const appSection = document.getElementById('application-section');
+      const detailTitle = document.getElementById('detail-title');
+      const detailDesc = document.getElementById('detail-desc');
+      const detailImage = document.getElementById('detail-image');
+      const roleTitle = document.getElementById('role-title');
+      const roleDesc = document.getElementById('role-desc');
+      const jobRoleInput = document.getElementById('job-role-input');
+      const form = document.getElementById('application-form');
+
+      // Populate job cards
+      jobs.forEach(job => {
+        const card = document.createElement('div');
+        card.className = 'job-card';
+        card.innerHTML = `
+          <h2 class="job-title">${job.title}</h2>
+          <p>${job.description}</p>
+          <button class="apply-button">Apply Here</button>
+        `;
+        card.querySelector('.apply-button').addEventListener('click', () => {
+          // Show job details and responsibilities
+          detailTitle.textContent = job.title;
+          detailDesc.textContent = job.description;
+          detailImage.src = job.image;
+          roleTitle.textContent = job.title;
+          roleDesc.textContent = job.description;
+          jobRoleInput.value = job.title;
+
+          // Display responsibilities
+          let responsibilitiesHTML = '<h3>Key Responsibilities:</h3><ul>';
+          job.responsibilities.forEach(item => {
+            responsibilitiesHTML += `<li>${item}</li>`;
+          });
+          responsibilitiesHTML += '</ul>';
+          detailDesc.innerHTML += responsibilitiesHTML;
+
+          // Show sections
+          detailSection.style.display = 'flex';
+          appSection.style.display = 'block';
+          appSection.scrollIntoView({ behavior: 'smooth' });
+        });
+        grid.appendChild(card);
+      });
+
+      // Handle form submission
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        alert(`Application submitted for ${jobRoleInput.value}!`);
+        form.reset();
+        detailSection.style.display = 'none';
+        appSection.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+</script>
+<script src="assets/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT & Engineering Solutions - Spasnik</title>
+    <link rel="icon" href="assets/images/IBLogo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* It Engineering Section */
+        .services-container1 {
+    position: relative;       
+    margin-top: 65px;
+    background-color: #FAD02C;
+    padding: 40px;
+    min-height: 100vh;
+    color: white;
+}
+
+.sevices-main-title {
+    font: 700 52px Merriweather, sans-serif;
+    margin-top: 20px;
+}
+
+.services-heading {
+    font: 28px Merriweather, serif;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+.service-card {
+    background: white;
+    color: black;
+    border-radius: 8px;
+    padding: 24px;
+    width: calc(33% - 16px);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30%;  /* Let the cards take up at least 30% of the width and grow */
+    max-width: 30%;  /* Prevent it from growing larger than 30% */
+}
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+.service-card h3 {
+    font-size: 24px;
+    margin: 15px;
+}
+.service-card p {
+    font-size: 16px;
+    margin: 15px;
+}
+.service-link {
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
+    margin-top: auto;
+    text-decoration: none;
+    font: 16px Arial, serif;
+}
+
+.services-sub-title {
+    width: 100%;
+    font: 700 40px Merriweather, serif;
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+.engineering-section {
+    display: flex;
+    margin-right: 34px;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+}
+.engineering-content {
+    display: flex;
+    flex-direction: column;
+    font-family: Merriweather, serif;
+    color: #fff;
+    width: 350px;
+}
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.section-description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 11px;
+    text-align: justify;
+    width: 100%;
+}
+.section-visual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-number {
+    color: #fff;
+    font: 400 60px/1.2 Monoton, cursive;
+}
+.image-container {
+    width: 306px;
+}
+.section-image {
+    aspect-ratio: 1.8;
+    object-fit: contain;
+    width: 100%;
+}
+.web-development-section {
+    display: flex;
+    margin-right: 34px;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.web-development-content {
+    display: flex;
+    flex-direction: column;
+    font-family: Merriweather, serif;
+    color: #fff;
+    width: 350px;
+}
+.mobile-development-section {
+    display: flex;
+    margin-right: 34px;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.mobile-development-content {
+    display: flex;
+    flex-direction: column;
+    font-family: Merriweather, serif;
+    color: #fff;
+    width: 350px;
+}
+.back-button {
+    display: inline-block;
+    background: #fff;
+    color: #FAD02C;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: background 0.3s;
+}
+.back-button a {
+    color: #FAD02C;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    display: inline-block;
+    background: #FAD02C;
+    color: #fff !important;
+}
+
+.back-button a:hover {
+    color: #ffff;
+}
+
+/* Timeline Styling */
+.timeline {
+    position: absolute;
+    left: 50%;
+    top: 230px; /* Adjusted to be aligned with content */
+    width: 6px;
+    height: 60%; /* Ensures it stretches through content */
+    background-color: #fff;
+    z-index: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.timeline-circle {
+    width: 30px;
+    height: 30px;
+    background: #FAD02C;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    align-self: center;
+}
+
+/* Position the timeline circles */
+.circle-1 {
+    top: 10%;
+}
+.circle-2 {
+    top: 35%;
+}
+.circle-3 {
+    bottom: 70%;
+}
+    </style>
+</head>
+<body>
+
+  <header class="header">
+        <!-- Logo -->
+        <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+            
+            <!-- Service Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Service</a>
+                <div class="dropdown-menu service-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Services</h4>
+                            <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                            <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                            <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                            <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                            <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industries Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Industries</a>
+                <div class="dropdown-menu industry-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Industries</h4>
+                            <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                            <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                            <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Recent Projects</h4>
+                            <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                            <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Career</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">About Us</a>
+                <div class="dropdown-menu aboutus-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">About Us</h4>
+                            <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                            <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Our Team</h4>
+                            <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                            <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Contact Us</a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons-header">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+     <!-- IT and Engineering Section -->
+     <div id="it-engineering" class="services-container1">
+        <h2 class="sevices-main-title">Our Services</h2>
+        <h3 class="services-sub-title">IT and Engineering Solutions</h3>
+        
+        <!-- Timeline -->
+        <div class="timeline">
+            <div class="timeline-circle circle-1"></div>
+            <div class="timeline-circle circle-2"></div>
+            <div class="timeline-circle circle-3"></div>
+        </div>
+
+        <div class="engineering-section">
+            <div class="engineering-content">
+                <div class="section-heading">IT and Engineering</div>
+                <div class="section-description">
+                    At Spasnik Solution Pvt Ltd, we provide cutting-edge IT and engineering solutions that optimize business operations. Our team leverages the latest technologies to design robust, scalable systems that enhance efficiency, reduce costs, and drive innovation, ensuring your business stays competitive in the digital landscape.
+                </div>
+            </div>
+            <div class="section-visual">
+                <div class="section-number">01</div>
+                <div class="image-container">
+                    <img src="assets/images/IT-engineering-img.png" alt="IT and Engineering illustration" class="section-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="web-development-section">
+            <div class="section-visual">
+                <div class="section-number">02</div>
+                <div class="image-container">
+                    <img src="assets/images/Web-Img.png" alt="IT and Engineering illustration" class="section-image">
+                </div>
+            </div>
+            <div class="web-development-content">
+                <div class="section-heading">Web Development</div>
+                <div class="section-description">
+                    We specialize in building responsive, dynamic websites that not only look great but also perform flawlessly. From e-commerce platforms to corporate websites, Spasnik Solution Pvt Ltd delivers web solutions that enhance user experience, drive traffic, and deliver measurable results for your business.
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-development-section">
+            <div class="mobile-development-content">
+                <div class="section-heading">Mobile Development</div>
+                <div class="section-description">
+                    Our mobile development services empower businesses with customized, high-performance mobile applications. Whether iOS or Android, we create intuitive and user-friendly apps that deliver seamless experiences, boost customer engagement, and unlock new opportunities for growth and innovation.
+                </div>
+            </div>
+            <div class="section-visual">
+                <div class="section-number">03</div>
+                <div class="image-container">
+                    <img src="assets/images/Mobile-img.png" alt="IT and Engineering illustration" class="section-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Services Button -->
+        <button class="back-button">
+            <a href="Innobyte-home.html.html#our-services">Back to Services</a>
+        </button>
+    </div>
+
+    <!--Footer Section-->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+          </div>
+      
+          <div class="footer-sections">
+            <div class="footer-column">
+              <h3>Information</h3>
+              <ul>
+                <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+                <li><a href="#">About InnoByte Solutions</a></li>
+                <li><a href="#">Why Choose Us?</a></li>
+                <li><a href="#">Get in Touch</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-column">
+              <h3>Our Services</h3>
+              <ul>
+                <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+                <li><a href="consulting.html">Consulting and Staffing</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-column">
+              <h3>Our Work</h3>
+              <ul>
+                <li><a href="#">Recent Projects</a></li>
+                <li><a href="#">Case Study</a></li>
+                <li><a href="#">Client Testimonial</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-column newsletter">
+              <h3>Subscribe</h3>
+              <p>Join our newsletter to stay up to date on features and releases.</p>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+              </div>
+              <p class="privacy-text">
+                By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+              </p>
+            </div>
+          </div>
+      
+          <div class="footer-bottom">
+            <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+            <ul class="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookies Settings</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="assets/script/script.js"></script>
+</body>
+</html>

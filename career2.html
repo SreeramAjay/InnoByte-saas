@@ -1,0 +1,447 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers at InnoByte Solutions</title>
+  <link rel="stylesheet" href="assets/css/styles.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .page-wrapper { overflow: hidden; background-color: white; }
+    .careers-landing { overflow: hidden; padding: 32px 42px 92px; width: 100%; background-color: #FAD02C; margin-top: 60px; height: 85vh; }
+    .content-wrapper1 { display: flex; gap: 20px; }
+    .content-left { width: 40%; }
+    .text-content { margin-top: 28px; width: 80%; }
+    .header-content { font-weight: 700; color: white; }
+    .main-title1 { font-size: 48px; line-height: 60px; }
+    .description { margin-top: 32px; font-size: 24px; line-height: 28px; text-align: justify; }
+    .cta-wrapper { display: flex; margin-top: 32px; max-width: 300px; }
+    .apply-button { padding: 10px 4px; font-size: 20px; font-weight: 800; color: #FAD02C; background-color: white; min-height: 50px; border: none; cursor: pointer; width: 200px; transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transition for smooth hover effect */ }
+    .apply-button:hover { background: #dc2626; /* Red background on hover */ color: white; /* White text on hover */ transform: scale(1.05); /* Slight scale-up effect */}
+    .content-right { margin-left: 20px; width: 60%; }
+    .image-wrapper { display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 10px; }
+    .hero-image { object-fit: contain; width: 100%; aspect-ratio: 1.5; }
+    /* Join Section Styles */
+    .join-section {
+        padding: 4rem 2rem;
+        background: var(--white);
+    }
+
+    .join-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .join-content h2 {
+        color: #FAD02C;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .join-layout {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .team-image-large {
+        flex: 0 0 45%;
+    }
+
+    .team-image-large img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .join-message-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .message-box {
+        background: #FAD02C;
+        color: white;
+        border-radius: 20px;
+        padding: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .message-box.primary {
+        margin-bottom: 1rem;
+    }
+
+    .join-bottom-section {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .team-image-small {
+        flex: 0 0 60%;
+    }
+
+    .team-image-small img {
+        width: 80%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .message-box.secondary {
+        flex: 1;
+        font-size: 1.3rem;
+        padding: 1rem;
+        text-align: justify;
+    }
+    @media (max-width: 768px) {
+      .careers-landing { padding: 48px 20px 96px; }
+      .content-wrapper1 { flex-direction: column; }
+      .content-left, .content-right { width: 100%; margin-left: 0; }
+      .text-content { margin-top: 40px; }
+      .main-title1 { font-size: 36px; line-height: 53px; }
+      .image-wrapper { margin-top: 40px; }
+    }
+     /* Responsive Design */
+     @media (max-width: 1200px) {
+        .join-content {
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .team-member {
+            flex: 0 0 calc(50% - 1rem);
+        }
+        
+        .join-layout {
+            flex-direction: column;
+        }
+
+        .team-image-large {
+            flex: 0 0 100%;
+        }
+
+        .team-image-large img {
+            max-height: 400px;
+            width: 80%;
+            object-fit: cover;
+        }
+
+        .join-message-container {
+            width: 100%;
+        }
+
+        .message-box {
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .join-section {
+            padding: 3rem 1rem;
+        }
+
+        .join-content h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .team-member {
+            flex: 0 0 100%;
+        }
+        
+        .team-section h1 {
+            font-size: 2.5rem;
+        }
+        
+        .team-section h2 {
+            font-size: 1.5rem;
+        }
+
+        .join-bottom-section {
+            flex-direction: column;
+        }
+
+        .team-image-small {
+            flex: 0 0 100%;
+        }
+
+        .team-image-small img {
+            max-height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .message-box.secondary {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        .message-box {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .join-section {
+            padding: 2rem 1rem;
+        }
+
+        .carousel-container {
+            padding: 0 20px;
+        }
+        
+        .join-content h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .join-layout {
+            gap: 1rem;
+        }
+
+        .team-image-large img,
+        .team-image-small img {
+            max-height: 250px;
+            border-radius: 15px;
+        }
+
+        .message-box {
+            padding: 1.25rem;
+            font-size: 1rem;
+            border-radius: 15px;
+        }
+
+        .message-box.secondary {
+            padding: 1rem;
+        }
+
+        .join-bottom-section {
+            gap: 0.75rem;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <!-- Logo -->
+    <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+    
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+        <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+        
+        <!-- Service Dropdown -->
+        <div class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">Service</a>
+            <div class="dropdown-menu service-dropdown">
+                <div class="container-box">
+                    <div class="left-panel">
+                        <h4 class="dropdown-section-title">Services</h4>
+                        <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                        <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                        <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                    </div>
+                    <div class="right-panel">
+                        <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                        <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                        <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Industries Dropdown -->
+        <div class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">Industries</a>
+            <div class="dropdown-menu industry-dropdown">
+                <div class="container-box">
+                    <div class="left-panel">
+                        <h4 class="dropdown-section-title">Industries</h4>
+                        <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                        <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                        <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                    </div>
+                    <div class="right-panel">
+                        <h4 class="service-heading2">Recent Projects</h4>
+                        <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                        <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="career2.html" class="nav-item">Career</a>
+
+        <!-- About Us Dropdown -->
+        <div class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">About Us</a>
+            <div class="dropdown-menu aboutus-dropdown">
+                <div class="container-box">
+                    <div class="left-panel">
+                        <h4 class="dropdown-section-title">About Us</h4>
+                        <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                        <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                    </div>
+                    <div class="right-panel">
+                        <h4 class="service-heading2">Our Team</h4>
+                        <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                        <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="nav-item">Contact Us</a>
+    </nav>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons-header">
+        <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</header>
+
+<!-- Career Page-->
+  <section class="page-wrapper">
+    <section class="careers-landing" data-el="careers-landing-page">
+      <div class="content-wrapper1">
+        <article class="content-left">
+          <div class="text-content">
+                <header class="header-content">
+                <h1 class="main-title1">
+                    Careers at<br />
+                    InnoByte Solutions
+                </h1>
+                <p class="description">
+                    Join InnoByte Solutions to drive impact in Digital Marketing, IT
+                    and Engineering Solutions, Consulting, or Staffing. We seek
+                    creative, strategic, and organized talent to innovate, solve
+                    problems, and shape business success.
+                </p>
+                </header>
+                <div class="cta-wrapper">
+                <button class="apply-button" aria-label="Apply for careers at InnoByte Solutions">
+                    Apply Here <span>></span>
+                </button>
+                </div>
+            </div>
+        </article>
+        <article class="content-right">
+          <figure class="image-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/25433ee88bec41168793f87d94746968/25e5314cee5933e9423cdc035b49ca16c97dfe03?placeholderIfAbsent=true"
+                 alt="Careers at InnoByte Solutions" class="hero-image" />
+          </figure>
+        </article>
+      </div>
+    </section>
+  </section>
+
+  <section class="join-section">
+    <div class="join-content">
+        <h2>Join Our Team at<br>InnoByte Solutions Pvt Ltd!</h2>
+        
+        <div class="join-layout">
+            <div class="team-image-large">
+                <img src="assets/images/team-image3.png" alt="Team working together">
+            </div>
+            <div class="join-message-container">
+                <div class="message-box primary">
+                    Join our dynamic team and be part of an innovative, fast-paced environment where your skills and enthusiasm can make a real impact! We're hiring for multiple roles—if you love tackling challenges and thrive on new opportunities, apply now and start your next great adventure with us!
+                </div>
+                <div class="join-bottom-section">
+                    <div class="team-image-small">
+                        <img src="assets/images/team-image5.jpg" alt="Team collaboration">
+                    </div>
+                    <div class="message-box secondary">
+                        Exciting opportunities<br> await!. Join our team <br>and make a difference
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+    <div class="footer-logo">
+        <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+    </div>
+
+    <div class="footer-sections">
+        <div class="footer-column">
+        <h3>Information</h3>
+        <ul>
+            <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+            <li><a href="#">About InnoByte Solutions</a></li>
+            <li><a href="#">Why Choose Us?</a></li>
+            <li><a href="#">Get in Touch</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-column">
+        <h3>Our Services</h3>
+        <ul>
+            <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+            <li><a href="consulting.html">Consulting and Staffing</a></li>
+            <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-column">
+        <h3>Our Work</h3>
+        <ul>
+            <li><a href="recentproject.html">Recent Projects</a></li>
+            <li><a href="case-study.html">Case Study</a></li>
+            <li><a href="testimonial.html">Client Testimonial</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-column newsletter">
+        <h3>Subscribe</h3>
+        <p>Join our newsletter to stay up to date on features and releases.</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="subscribe-button">Subscribe</button>
+        </div>
+        <p class="privacy-text">
+            By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+        </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+        <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookies Settings</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+  <script>
+    // Correct selector and redirect to the application form page
+    document.querySelector('.apply-button').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = 'apply1.html';
+    });
+  </script>
+  <script src="assets/script/script.js"></script>
+</body>
+</html>

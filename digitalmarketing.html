@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital marketing</title>
+    <link rel="icon" href="assets/images/favicon-logo2.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+.marketing-section1 {
+  position: relative;
+  display: flex;
+  padding: 15px 0 0;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.hero-banner1 {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  font: 900 42px Merriweather, sans-serif;
+  height: 40vh; /* Set the height to 100% of the viewport */
+  min-height: 400px; /* Optionally, use min-height for responsiveness */
+}
+
+.hero-banner-wrapper1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100%; /* This allows it to grow but not go beyond the height of the container */
+  position: relative;
+}
+
+.hero-image1 {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1; /* Ensure the image stays behind the text */
+}
+
+.hero-title1 {
+  margin-top: 130px;
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 54px;
+  z-index: 1; /* Ensure the title stays on top of the image */
+  text-align: center;
+}
+
+.domain-service-card {
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 1px 0 36px;
+}
+
+.domain-service-icon-wrapper {
+  align-self: end;
+  z-index: 10;
+  display: flex;
+  width: 344px;
+  max-width: 100%;
+  flex-direction: column;
+}
+
+.domain-service-icon-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.domain-service-icon {
+  align-self: stretch;
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.domain-service-number {
+  position: absolute;
+  width: 64px;
+  color: #fff;
+  text-align: center;
+  top: 63%;
+  right: 68%;
+  font: 300 100px 'Micro 5', sans-serif !important; /* Increased the font size to 150px and added !important */
+}
+
+.domain-service-image {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 180px;
+  max-width: 100%;
+  flex-direction: column;
+  right: 77px;
+  top: 81px;
+}
+
+.domain-service-content {
+  display: flex;
+  min-height: 290px;
+  width: 100%;
+  max-width: 1259px;
+  flex-direction: column;
+  margin: -285px 21px 0 0;
+}
+
+.domain-service-background {
+  background-color: #FAD02C;
+  display: flex;
+  min-height: 300px;
+  width: 100%;
+}
+
+.domain-service-text {
+  z-index: 10;
+  display: flex;
+  width: 590px;
+  max-width: 100%;
+  flex-direction: column;
+  font-family: Merriweather, sans-serif;
+  color: #fff;
+  margin: -277px 0 0 56px;
+}
+
+.domain-service-title {
+  align-self: start;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.domain-service-description {
+  align-self: stretch;
+  width: 100%;
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.features-section {
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  padding-bottom: 22px;
+  flex-direction: column;
+  align-items: center;
+}
+.iphone-container {
+  position: relative;
+  width: 600px; /* Adjusted for iPhone frame */
+}
+.iphone-frame {
+  width: 100%;
+  display: block;
+}
+        .screen-content {
+            position: absolute;
+            top: 12%;
+            left: 8%;
+            width: 84%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        .image-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+        .grid-image:nth-child(1) {
+            width: 70%; /* Center image 1 */
+        }
+        .bottom-images {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .bottom-images .grid-image {
+            width: 48%;
+        }
+.feature-content {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  max-width: 1108px;
+  align-items: center;
+  gap: 40px 100px;
+  color: #FAD02C;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-text {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  font-family: Merriweather, sans-serif;
+  width: 600px;
+  margin: auto 0;
+}
+
+.logo-designing-service-title {
+  font-family: Merriweather, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo-designing-service-description {
+  align-self: stretch;
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.website-hosting-service-title {
+  font-family: Merriweather, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.website-hosting-service-description {
+  align-self: stretch;
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.content-development-service-title {
+  font-family: Merriweather, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content-development-description {
+  align-self: stretch;
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px !important;
+}
+
+.feature-number {
+  align-self: stretch;
+  text-align: center;
+  width: 64px;
+  margin: auto 0;
+  font: 300 100px 'Micro 5', sans-serif !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+/* Brand Identity Section */
+ .brand-identity-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 450px;
+            background-color: #FAD02C;
+            padding: 1px 0 36px;
+
+        }
+        .brand-identity-image-section {
+            left: 2%; 
+            position: relative; /* Allows absolute positioning inside */
+            display: flex;
+            align-items: center;
+            width: 200px; 
+            max-width: 60%;
+        }
+
+        .brand-identity-number {
+            font-weight: bold;
+            color: #FFF;
+            position: absolute;
+            bottom: -7px; /* Moves the number downward */
+            left: 50%; /* Centers the number horizontally */
+            transform: translateX(-100%); /* Correct the position and center the number */
+            font: 400 100px "Micro 5", sans-serif; /* Ensure the correct font is applied */
+        }
+
+        .brand-identity-image-section img {
+          margin-top: 20px;
+            width: 300px;
+        }
+        .brand-identity-text-section {
+            max-width: 500px;
+            color: #FFF;
+            text-align: justify;
+            gap: 20px;
+        }
+
+        .brand-identity-text-section h3 {
+            font-size: 24px; /* Increase the heading size */
+            font-weight: 700; /* Make it stand out */
+            text-align: right;
+            font-family: Merriweather, sans-serif;
+        }
+
+        .brand-identity-text-section p {
+            font-size: 19px; /* Increase the paragraph size */
+            line-height: 24px; /* Improve readability */
+            text-align: justify;
+            align-self: stretch;
+            font-weight: 400;
+        }
+        
+        /* Broucher Designing Section */
+        .broucher-designing-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 450px;
+            background-color: #FAD02C;
+            padding: 1px 0 36px;
+
+        }
+        .broucher-designing-image-section {
+            left: 2%; 
+            position: relative; /* Allows absolute positioning inside */
+            display: flex;
+            align-items: center;
+            width: 200px; 
+            max-width: 60%;
+        }
+        .broucher-designing-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #FFF;
+            position: absolute;
+            bottom: -7px; /* Moves the number downward */
+            left: 70%;
+            transform: translateX(-150%); 
+            font: 400 100px "Micro 5", sans-serif; /* Ensure the correct font is applied */
+        }
+        .broucher-designing-image-section img {
+          margin-top: 20px;
+            width: 300px;
+        }
+        .broucher-designing-text-section {
+            max-width: 500px;
+            color: #FFF;
+            text-align: justify;
+            gap: 20px;
+        }
+
+        .broucher-designing-text-section h3 {
+            font-size: 24px; /* Increase the heading size */
+            font-weight: 700; /* Make it stand out */
+            text-align: right;
+            font-family: Merriweather, sans-serif;
+        }
+
+        .broucher-designing-text-section p {
+            font-size: 19px; /* Increase the paragraph size */
+            line-height: 24px; /* Improve readability */
+            text-align: justify;
+            align-self: stretch;
+            font-weight: 400;
+        }
+
+        /*Content Priting css */
+        .content-printing-service-card {
+          z-index: 0;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          padding: 1px 0 36px;
+        }
+
+        .content-printing-service-icon-wrapper {
+          align-self: end;
+          z-index: 10;
+          display: flex;
+          width: 344px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+
+        .content-printing-service-icon-container {
+          position: relative;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: start;
+        }
+
+        .content-printing-service-icon {
+          align-self: stretch;
+          z-index: 0;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .content-printing-service-number {
+          position: absolute;
+          width: auto; /* Allow width to adjust based on content */
+          color: #FAD02C;
+          text-align: center;
+          top: 63%;
+          right: 68%;
+          font: 400 100px "Micro 5", sans-serif; /* Increase the font size */
+          line-height: 1; /* Ensure the line height doesn’t cut off the number */
+          white-space: nowrap; /* Prevent the number from wrapping to a new line */
+        }
+
+        .content-printing-service-image {
+          position: absolute;
+          z-index: 0;
+          display: flex;
+          width: 130px;
+          max-width: 100%;
+          flex-direction: column;
+          right: 106px;
+          top: 81px;
+        }
+
+        .content-printing-service-content {
+          display: flex;
+          min-height: 290px;
+          width: 100%;
+          max-width: 1259px;
+          flex-direction: column;
+          margin: -285px 21px 0 0;
+        }
+
+        .content-printing-service-background {
+          background-color: #fff;
+          display: flex;
+          min-height: 290px;
+          width: 100%;
+        }
+
+        .content-printing-service-text {
+          z-index: 10;
+          display: flex;
+          width: 590px;
+          max-width: 100%;
+          flex-direction: column;
+          font-family: Merriweather, sans-serif;
+          color: #FAD02C;
+          margin: -247px 0 0 56px;
+        }
+
+        .content-printing-service-title {
+          align-self: start;
+          font-size: 24px;
+          font-weight: 700;
+          font-family: Merriweather, serif;
+        }
+
+        .content-printing-service-description {
+          align-self: stretch;
+          width: 100%;
+          margin-top: 13px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 27px;
+        }
+        
+        /*Web Designing css */
+        .web-designing-service-card {
+          z-index: 0;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          padding: 1px 0 36px;
+        }
+
+        .web-designing-service-icon-wrapper {
+          align-self: end;
+          z-index: 10;
+          display: flex;
+          width: 344px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+
+        .web-designing-service-icon-container {
+          position: relative;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: start;
+        }
+
+        .web-designing-service-icon {
+          align-self: stretch;
+          z-index: 0;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .web-designing-service-number {
+          position: absolute;
+          width: auto; /* Allow width to adjust based on content */
+          color: #FAD02C;
+          text-align: center;
+          top: 63%;
+          right: 68%;
+          font: 400 100px "Micro 5", sans-serif; /* Increase the font size */
+          line-height: 1; /* Ensure the line height doesn’t cut off the number */
+          white-space: nowrap; /* Prevent the number from wrapping to a new line */
+        }
+
+        .web-designing-service-image {
+          position: absolute;
+          z-index: 0;
+          display: flex;
+          width: 170px;
+          max-width: 100%;
+          flex-direction: column;
+          right: 87px;
+          top: 81px;
+        }
+
+        .web-designing-service-content {
+          display: flex;
+          min-height: 290px;
+          width: 100%;
+          max-width: 1259px;
+          flex-direction: column;
+          margin: -285px 21px 0 0;
+        }
+
+        .web-designing-service-background {
+          background-color: #fff;
+          display: flex;
+          min-height: 290px;
+          width: 100%;
+        }
+
+        .web-designing-service-text {
+          z-index: 10;
+          display: flex;
+          width: 590px;
+          max-width: 100%;
+          flex-direction: column;
+          font-family: Merriweather, sans-serif;
+          color: #FAD02C;
+          margin: -247px 0 0 56px;
+        }
+
+        .web-designing-service-title {
+          align-self: start;
+          font-size: 24px;
+          font-weight: 700;
+          font-family: Merriweather, serif;
+        }
+
+        .web-designing-service-description {
+          align-self: stretch;
+          width: 100%;
+          margin-top: 13px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+        <!-- Logo -->
+        <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+            
+            <!-- Service Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Service</a>
+                <div class="dropdown-menu service-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Services</h4>
+                            <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                            <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                            <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                            <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                            <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industries Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Industries</a>
+                <div class="dropdown-menu industry-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Industries</h4>
+                            <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                            <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                            <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Recent Projects</h4>
+                            <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                            <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Career</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">About Us</a>
+                <div class="dropdown-menu aboutus-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">About Us</h4>
+                            <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                            <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Our Team</h4>
+                            <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                            <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Contact Us</a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons-header">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+  
+
+  <!--Digital Marketing section-->
+    <div class="marketing-section1">
+        <div class="hero-banner1">
+          <div class="hero-banner-wrapper1">
+            <img src="assets/images/DM-Background-Image.png" alt="Digital Marketing Banner" class="hero-image1" />
+            <h2 class="hero-title1">Digital Marketing</h2>
+          </div>
+        </div>
+
+        <!--Domian Registration-->
+      
+        <div class="domain-service-card">
+          <div class="domain-service-icon-wrapper">
+            <div class="domain-service-icon-container">
+              <div class="domain-service-icon">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f85acad52b851d5ccba1d5168bc143fdeec54506b02708775f3bad918a3cb1e4?placeholderIfAbsent=true&apiKey=203543fc4ba945b98fdbb8da2e4bf2ef" alt="Domain Registration Icon" />
+              </div>
+              <span class="domain-service-number">01</span>
+              <div class="domain-service-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/11f0dea6e01150dea1c2a79ea604bd05180e75bfe9f2b9a9b7f5fbbcefdf976e?placeholderIfAbsent=true&apiKey=203543fc4ba945b98fdbb8da2e4bf2ef" alt="Domain Registration Illustration" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="domain-service-content">
+            <div class="domain-service-background"></div>
+          </div>
+          
+          <div class="domain-service-text">
+            <h3 class="domain-service-title">Domain Registration</h3>
+            <p class="domain-service-description">
+              Securing the perfect domain name for your business is the first step in establishing your online identity. By registering a unique domain, you ensure brand consistency and credibility, making it easier for customers to find and trust your website. A memorable domain name reinforces your brand's presence and enhances your digital marketing efforts.
+            </p>
+          </div>
+        </div>
+        
+        <!--Logo Designing, Website Hoting and Content Development Section-->
+        <div class="features-section">
+          <div class="iphone-container">
+            <!-- iPhone Frame -->
+            <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/24bd0ff35c56903ddb45d50b74c2fd6772a7f4b1dec7957f4cb8e464ac53f77b?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="iPhone Frame" class="iphone-frame">
+            
+            <!-- Content inside the iPhone screen -->
+            <div class="screen-content">
+                <div class="image-grid">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/a3805593d268bb0962fc7b1ba29cd26e72a3fc0a824b531ffe9b8472de5773f1?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Image 1" class="grid-image">
+                    <div class="bottom-images">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/4945f8338f2af7fddc9343bcaeddb73032c0d824123d15bc5a7d3442b2c0b2e6?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Image 2" class="grid-image">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/0fc91c68aed4806163ac98d3aa4915c3972781590deb1c15e23dcca55446dd8c?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Image 3" class="grid-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+          <div class="feature-content">
+            <div class="feature-text">
+              <h3 class="logo-designing-service-title">Logo Designing</h3>
+              <p class="logo-designing-service-description">
+                Your logo is the visual cornerstone of your brand identity. A professional, memorable logo makes a strong first impression and instantly communicates what your business stands for. The design process involves creating a logo that reflects your brand's personality, values, and mission, ensuring it resonates with your target audience while being versatile for various applications.
+              </p>
+            </div>
+            <span class="feature-number">02</span>
+          </div>
+      
+          <div class="feature-content">
+            <span class="feature-number">03</span>
+            <div class="feature-text">
+              <h3 class="website-hosting-service-title">Website Hosting</h3>
+              <p class="website-hosting-service-description">
+                A reliable hosting service is crucial for ensuring your website is always accessible to users. With fast loading times and secure servers, quality website hosting helps maintain optimal performance and protects your site from downtime. By choosing the right hosting plan, you ensure a seamless experience for your visitors, which can positively impact user engagement and SEO.
+              </p>
+            </div>
+          </div>
+      
+          <div class="feature-content">
+            <div class="feature-text">
+              <h3 class="content-development-service-title">Content Development</h3>
+              <p class="content-development-service-description">
+                High-quality, engaging content is key to connecting with your audience and driving your marketing efforts. From blog posts and articles to social media updates and email campaigns, well-crafted content strengthens your brand's voice, educates your audience, and supports conversion goals. This service focuses on delivering the right message, at the right time, across the right channels.
+              </p>
+            </div>
+            <span class="feature-number">04</span>
+          </div>
+        </div>
+        
+        <!--Brand Identity Section-->
+        <div class="broucher-designing-container">
+          <div class="broucher-designing-image-section">
+              <div class="broucher-designing-number">05</div>
+              <img src="assets/images/BrochureImg.png" alt="Branding Image">
+          </div>
+          <div class="broucher-designing-text-section">
+              <h3>Brochure Designing</h3>
+              <p>Brochures remain one of the most effective ways to communicate key information about your products or services in a visually appealing format. This service involves designing brochures that are not only attractive but also effectively convey your message, highlight key offerings, and create a lasting impression. Brochures are ideal for both print and digital marketing campaigns.</p>
+          </div>
+        </div>
+        <!--Content Printing-->
+        <div class="content-printing-service-card">
+          <div class="content-printing-service-icon-wrapper">
+            <div class="content-printing-service-icon-container">
+              <div class="content-printing-service-icon">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f85acad52b851d5ccba1d5168bc143fdeec54506b02708775f3bad918a3cb1e4?placeholderIfAbsent=true&apiKey=203543fc4ba945b98fdbb8da2e4bf2ef" alt="Content Printing Icon" />
+              </div>
+              <span class="content-printing-service-number">06</span>
+              <div class="content-printing-service-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/01f82c17645d369ab5309878d56188d850eb337f24264cf6e671b022930f04fa?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Content Printing Illustration" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-printing-service-content">
+            <div class="content-printing-service-background"></div>
+          </div>
+          
+          <div class="content-printing-service-text">
+            <h3 class="content-printing-service-title">Content Printing</h3>
+            <p class="content-printing-service-description">
+              Content writing involves creating informative, engaging, and SEO-friendly text for websites, blogs, social media, and other platforms. It helps convey your brand’s message, boost online visibility, and engage your audience, driving traffic and conversions through well-crafted words.
+            </p>
+          </div>
+        </div>
+
+    <!--Brand Identity Section-->
+    <div class="brand-identity-container">
+      <div class="brand-identity-image-section">
+          <div class="brand-identity-number">07</div>
+          <img src="assets/images/Image.png.png" alt="Branding Image">
+      </div>
+      <div class="brand-identity-text-section">
+          <h3>Branding Identity</h3>
+          <p>Branding and identity development is about creating a cohesive look and feel for your business across all touchpoints. This includes designing logos, choosing color schemes, crafting messaging, and setting a tone that reflects your values. Consistent branding builds recognition and trust, helping customers identify and connect with your business more easily.</p>
+      </div>
+  </div>
+
+    <!--Web Designing Section-->
+    <div class="web-designing-service-card">
+      <div class="web-designing-service-icon-wrapper">
+        <div class="web-designing-service-icon-container">
+          <div class="web-designing-service-icon">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f85acad52b851d5ccba1d5168bc143fdeec54506b02708775f3bad918a3cb1e4?placeholderIfAbsent=true&apiKey=203543fc4ba945b98fdbb8da2e4bf2ef" alt="Content Printing Icon" />
+          </div>
+          <span class="web-designing-service-number">08</span>
+          <div class="web-designing-service-image">
+            <img src="https://cdn.builder.io/api/v1/image/assets/203543fc4ba945b98fdbb8da2e4bf2ef/efbeb4cdd3b501bb5c4b8deb768fe9c7410eaa5895796dee1f3ff8997f18df43?apiKey=203543fc4ba945b98fdbb8da2e4bf2ef&" alt="Content Printing Illustration" />
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-printing-service-content">
+        <div class="content-printing-service-background"></div>
+      </div>
+      
+      <div class="content-printing-service-text">
+        <h3 class="content-printing-service-title">Web Designing</h3>
+        <p class="content-printing-service-description">
+          A visually appealing and user-friendly website is essential for attracting and retaining customers. Web designing focuses on creating a functional layout, intuitive navigation, and an aesthetically pleasing design that represents your brand. It also involves optimizing the site for mobile devices and ensuring fast load times, which are vital for providing a positive user experience.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+      </div>
+  
+      <div class="footer-sections">
+        <div class="footer-column">
+          <h3>Information</h3>
+          <ul>
+            <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+            <li><a href="#">About InnoByte Solutions</a></li>
+            <li><a href="#">Why Choose Us?</a></li>
+            <li><a href="#">Get in Touch</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+            <li><a href="consulting.html">Consulting and Staffing</a></li>
+            <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column">
+          <h3>Our Work</h3>
+          <ul>
+            <li><a href="recentproject.html">Recent Projects</a></li>
+            <li><a href="case-study.html">Case Study</a></li>
+            <li><a href="testimonial.html">Client Testimonial</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column newsletter">
+          <h3>Subscribe</h3>
+          <p>Join our newsletter to stay up to date on features and releases.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+          <p class="privacy-text">
+            By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+          </p>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookies Settings</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script/script.js"></script>
+</body>
+</html>

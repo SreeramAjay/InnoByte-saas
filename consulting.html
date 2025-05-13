@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/IBLogo.png" type="image/png">
+    <title>Consulting and Staffing</title>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      .consulting-container {
+            background-color: #FAD02C; /* Red background */
+            padding: 40px 20px; /* Adds space around content */
+            text-align: center;
+        }
+
+        /* Adjust h1 styling */
+        .consulting-container h2 {
+            color: white;
+            margin: 80px 0 40px 0;
+            text-align: center;
+            font: 700 42px Merriweathe, serif;
+        }
+
+        .container-consulting {
+            margin-top: 20px;
+            background-color: #FAD02C;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            gap: 90px;
+            padding: 20px;
+        }
+        .box1 {
+            width: 300px;
+            background: #ffff;
+            color: #FAD02C;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            animation: moveText1 2s ease-in-out forwards;
+            transform-origin: center;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .box1:hover {
+            transform: scale(1.05)
+        }
+
+        /* Text animation: Right to Left */
+        @keyframes moveText1 {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        }
+
+        .box2 {
+            width: 300px;
+            background: #ffff;
+            color: #FAD02C;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            animation: moveText2 2s ease-in-out forwards;
+            transform-origin: center;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .box-2:hover {
+            transform: scale(1.05) ;
+        }
+        /* Text animation: Right to Left */
+        @keyframes moveText2 {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        }
+
+        /* Hover effect: tilt, float, and glow */
+        .box1:hover {
+            transform: translateY(-10px) rotateY(10deg) scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .box2:hover {
+            transform: translateY(-10px) rotateY(10deg) scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Adding a slight bounce effect on hover */
+        .box1:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: rgba(207, 27, 46, 0.6);
+            bottom: -10px;
+            left: 0;
+            border-radius: 50%;
+            filter: blur(10px);
+            animation: bounce-glow 0.6s ease-in-out infinite alternate;
+        }
+
+        .box2:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: rgba(207, 27, 46, 0.6);
+            bottom: -10px;
+            left: 0;
+            border-radius: 50%;
+            filter: blur(10px);
+            animation: bounce-glow 0.6s ease-in-out infinite alternate;
+        }
+
+        /* Bounce Glow Animation */
+        @keyframes bounce-glow {
+            0% {
+                transform: scaleX(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scaleX(1.1);
+                opacity: 1;
+            }
+        }
+
+        .box1 h3 {
+            margin-top: 0;
+            font: 600 28px Merriweather, serif;
+            text-align: center;
+        }
+
+        .box2 h3 {
+            margin-top: 0;
+            font: 600 28px Merriweather, serif;
+            text-align: center;
+        }
+
+        .icon {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #FAD02C;
+            font-weight: bold;
+            border: 3px solid #FAD02C;
+        }
+        .illustration {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .back-button1 {
+            display: inline-block;
+            background: #fff;
+            color: #FAD02C;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+            align-items: left;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+         }
+
+         .back-button1:hover {
+            transform: translateY(-10px) rotateY(10deg) scale(1.05);
+        }
+
+        .back-button1 a {
+            color: #FAD02C;
+            text-decoration: none;
+         }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <img src="assets/images/innobyte-logo.png" alt="InnoByte Solutions Logo" class="logo">
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="Innobyte-home.html.html" class="nav-item">Home</a>
+            
+            <!-- Service Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Service</a>
+                <div class="dropdown-menu service-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Services</h4>
+                            <div class="service-title1" data-type="service" data-index="0">IT and Engineering Solutions</div>
+                            <div class="service-title1" data-type="service" data-index="1">Consulting and Staffing</div>
+                            <div class="service-title1" data-type="service" data-index="2">Digital Marketing</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">IT and Engineering Solutions</h4>
+                            <p class="service-description1">We deliver cutting-edge IT and engineering services, offering tailored solutions in software development, consulting, and infrastructure to help businesses optimize performance and embrace digital transformation.</p>
+                            <a href="it-engineering.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industries Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Industries</a>
+                <div class="dropdown-menu industry-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">Industries</h4>
+                            <div class="service-title1" data-type="industry" data-index="0">Recent Projects</div>
+                            <div class="service-title1" data-type="industry" data-index="1">Case Study</div>
+                            <div class="service-title1" data-type="industry" data-index="2">Client Testimonial</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Recent Projects</h4>
+                            <p class="service-description1">Showcasing our latest successful projects across various industries, highlighting our expertise in delivering innovative solutions, exceptional results, and client satisfaction.</p>
+                            <a href="recentproject.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Career</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">About Us</a>
+                <div class="dropdown-menu aboutus-dropdown">
+                    <div class="container-box">
+                        <div class="left-panel">
+                            <h4 class="dropdown-section-title">About Us</h4>
+                            <div class="service-title1" data-type="aboutus" data-index="0">Our Team</div>
+                            <div class="service-title1" data-type="aboutus" data-index="1">Our Story</div>
+                        </div>
+                        <div class="right-panel">
+                            <h4 class="service-heading2">Our Team</h4>
+                            <p class="service-description1">A dedicated group of experts committed to innovation, collaboration, and excellence, bringing diverse skills and experience to drive success for our clients.</p>
+                            <a href="our-team1.html" class="learn-more" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav-item">Contact Us</a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons-header">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+    
+    <!-- Consulting Section Wrapper -->
+    <div class="consulting-container">
+      <h2>Consulting and Staffing</h2>
+      <div class="container-consulting">
+          <div class="box1">
+              <div class="icon">01</div>
+              <img src="assets/images/Consulting-frame-img.png" alt="Consulting Illustration" class="illustration">
+              <h3>Consulting Roles</h3>
+              <p>Consulting Roles involve providing expert guidance to help businesses improve strategies, operations, and technology. Consultants assess challenges and offer tailored solutions to drive growth, efficiency, and long-term success.</p>
+          </div>
+          <div class="box2">
+              <div class="icon">02</div>
+              <img src="assets/images/Staffing-frame-img.png" alt="Staffing Illustration" class="illustration">
+              <h3>Staffing Roles</h3>
+              <p>Staffing Roles focus on sourcing, recruiting, and managing talent to ensure businesses have the right people for their current and future needs. These roles ensure that organizations are equipped with skilled professionals to meet their goals.</p>
+          </div>
+      </div>
+      <button class="back-button1">
+          <a href="Innobyte-home.html.html#our-services">Back to Services</a>
+      </button>
+    </div>
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3 class="logo-image"><img src="assets/images/innobyte-logo.png" /></h3>
+      </div>
+  
+      <div class="footer-sections">
+        <div class="footer-column">
+          <h3>Information</h3>
+          <ul>
+            <li><a href="#">Unlocking your Potential with InnoByte Solutions</a></li>
+            <li><a href="#">About InnoByte Solutions</a></li>
+            <li><a href="#">Why Choose Us?</a></li>
+            <li><a href="#">Get in Touch</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="it-engineering.html">IT and Engineering Solutions</a></li>
+            <li><a href="consulting.html">Consulting and Staffing</a></li>
+            <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column">
+          <h3>Our Work</h3>
+          <ul>
+            <li><a href="recentproject.html">Recent Projects</a></li>
+            <li><a href="case-study.html">Case Study</a></li>
+            <li><a href="testimonial.html">Client Testimonial</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column newsletter">
+          <h3>Subscribe</h3>
+          <p>Join our newsletter to stay up to date on features and releases.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+          <p class="privacy-text">
+            By subscribing, you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+          </p>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>© 2024 InnoByte Solutions. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookies Settings</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/spasnik.solutions/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/spasnik_solutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919985376547"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script/script.js"></script>
+</body>
+</html>
